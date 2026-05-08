@@ -14,11 +14,13 @@ Attack Simulation: Atomic Red Team and custom PowerShell scripts.
 Key Modifications & Configurations
 Windows Defender Log Integration: I successfully expanded the Wazuh monitoring scope by adding the Windows Defender event channel as a new log source. This provided critical visibility into malware detections, remediation actions, and real-time endpoint protection events.
 
-Security Experiments & Validated Detections
+### Security Experiments & Validated Detections
 I executed three primary experiments to test the detection capabilities of the environment:
-MITRE ID,Technique,Simulation Tool,Detection Outcome
-T1566.001,Phishing: Spearphishing Attachment,Atomic Red Team,Confirmed logging of malicious attachment execution.  
-T1047,Windows Management Instrumentation (WMI),Sysmon / MITRE,Detected unauthorized WMI execution for persistence.  
-T1059.003,PowerShell Abuse,Custom Scripts / Defender,Validated Defender's reaction to malicious PowerShell commands.  
+
+| MITRE ID | Technique | Simulation Tool | Detection Outcome |
+| :--- | :--- | :--- | :--- |
+| **T1566.001** | Phishing: Spearphishing Attachment | Atomic Red Team | Confirmed logging of malicious attachment execution. |
+| **T1047** | Windows Management Instrumentation (WMI) | Sysmon / MITRE | Detected unauthorized WMI execution for persistence. |
+| **T1059.003** | PowerShell Abuse | Custom Scripts / Defender | Validated Defender's reaction to malicious PowerShell commands. | 
 
 [Copy of [Sprint 11] Plan Proposal {Anthony Negron}.pdf](https://github.com/user-attachments/files/27486184/Copy.of.Sprint.11.Plan.Proposal.Anthony.Negron.pdf)

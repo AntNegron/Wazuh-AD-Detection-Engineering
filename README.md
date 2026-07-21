@@ -24,13 +24,14 @@ This project involved deploying a centralized **Wazuh SIEM** within a multi-VM *
 ---
 
 ## 🧠 Validated Detections (MITRE ATT&CK)
+
 I executed specific experiments to validate that my SIEM was correctly parsing and alerting on malicious activity:
 
 | MITRE ID | Technique | Simulation Tool | Detection Outcome |
-| :--- | :--- | :--- | :--- |
-| **T1110** | Brute Force | Hydra / Kali | **Success:** Identified rapid login failures and source IP. |
-| **T1003** | OS Credential Dumping | Mimikatz | **Success:** Captured LSASS access and unauthorized tool execution. |
-| **T1059.001** | PowerShell Abuse | Atomic Red Team | **Success:** Validated Defender alerts for encoded PS commands. |
+|---|---|---|---|
+| **T1566.001** | Phishing: Spearphishing Attachment | Atomic Red Team | **Success:** Wazuh captured process creation metadata for the malicious attachment execution. |
+| **T1047** | Windows Management Instrumentation | Atomic Red Team | **Success:** Wazuh logged the full WMI command line and process/parent relationship. |
+| **T1059.003** | PowerShell Execution | Atomic Red Team | **Success:** Defender blocked the script in real time; Wazuh captured and indexed the alert end-to-end. |
 
 ---
 
